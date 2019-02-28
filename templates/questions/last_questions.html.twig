@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+<h1>Voici la liste des questions : </h1>
+{% for question in questions %}
+    <article>
+        <a href="{{ path('question_show', {'id': question.id}) }}"><h3> {{question.title}} </h3></a>
+        <h4> {{question.dateCreaed | date('d/m/Y') }} </h4>
+    </article>
+{% endfor %}
+
+{% endblock %}

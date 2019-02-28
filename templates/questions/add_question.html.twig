@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+{{ form_start(formNewQuestion, {'attr' : {'novalidate':'novalidate'}})  }}
+
+{{ form_row(formNewQuestion.title, { 'attr' : { 'placeholder' : "Titre de la question" }}) }}
+{{ form_row(formNewQuestion.description, { 'attr' : { 'placeholder' : "Description de la question" }})}}
+
+<button type="submit" class="btn btn-success"> Ajouter l'article </button>
+
+{{ form_end(formNewQuestion) }}
+
+{% endblock %}

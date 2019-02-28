@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+    <article>
+        <h2> {{questions.title}} </h2>
+        <h3> {{questions.dateCreaed | date('d/m/Y') }} </h3>
+        <h4> {{questions.description}} </h4>
+        <a href="{{ path('comment_create') }} "<h4>Laisser un commentaire</h4></a>
+    </article>
+
+
+{% for comment in comments %}
+    <article>
+        <h3> {{comment.content}} </h3>
+        <h4> {{comment.dateCreated | date('d/m/Y') }} </h4>
+    </article>
+{% endfor %}
+
+{% endblock %}

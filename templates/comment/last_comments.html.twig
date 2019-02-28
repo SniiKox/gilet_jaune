@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+<h1>Voici la liste des commentaires : </h1>
+{% for comment in comments %}
+    <commentaire>
+        <h3> {{comment.content}} </h3>
+        <h4> {{comment.dateCreated | date('d/m/Y') }} </h4>
+    </commentaire>
+{% endfor %}
+
+{% endblock %}

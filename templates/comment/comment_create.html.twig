@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+{{ form_start(formComment, {'attr' : {'novalidate':'novalidate'}})  }}
+
+{{ form_row(formComment.content, { 'attr' : { 'placeholder' : "Contenu du commentaire" }}) }}
+
+<button type="submit" class="btn btn-success"> Ajouter mon commentaire </button>
+
+{{ form_end(formComment) }}
+
+{% endblock %}

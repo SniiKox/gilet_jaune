@@ -1,0 +1,8 @@
+/* Personnaliser les messages d'erreur, mais bootstrap prend le dessus */
+form[name="formQuestion"] li {
+    color:royalblue;
+    font-weight: bold;
+}
+
+
+
